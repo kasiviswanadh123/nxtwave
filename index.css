@@ -1,4 +1,592 @@
-h1 {
-    color: green;
-    text-align: center;
+
+/* Removes default margin and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common styling for the complete website */
+body {
+    font-family: Arial, sans-serif;
+    color: #232020;
+    background-color: white;
+    line-height: 1.5;
+}
+
+
+/* ============================= */
+/*          TOP HEADER           */
+/* ============================= */
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 1px solid #d6d2d0;
+}
+
+/* Places the logo and Blog text in one row */
+.brand {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.blog {
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+/* Arranges search, icons and account links horizontally */
+.header-right {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    align-items: center;
+    gap: 22px;
+}
+
+/* Styles the search box */
+.header-right input {
+    width: 270px;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+.header-icon {
+    font-size: 22px;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: #201d1d;
+    font-weight: bold;
+}
+
+/* Sign up button */
+.signup {
+    background-color: #201d1d;
+    color: white !important;
+    padding: 13px 23px;
+    border-radius: 30px;
+}
+
+
+/* ============================= */
+/*         PAGE LAYOUT           */
+/* ============================= */
+
+/* Creates two main columns:
+   Sidebar on the left and content on the right */
+.page-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    padding: 40px 4%;
+}
+
+
+/* ============================= */
+/*           SIDEBAR             */
+/* ============================= */
+
+.sidebar {
+    padding: 0 10px;
+}
+
+/* Arranges sidebar links vertically */
+.side-nav {
+    display: grid;
+    gap: 18px;
+}
+
+/* Each sidebar link has an icon and text */
+.side-nav a {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    text-decoration: none;
+    color: #444;
+    font-size: 23px;
+}
+
+.side-nav span {
+    font-size: 30px;
+}
+
+/* Separates different sidebar categories */
+.side-nav hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+/* Business information below the sidebar links */
+.business-info {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 25px;
+    font-size: 16px;
+    color: #444;
+}
+
+.business-title {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.business-info p {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+
+/* ============================= */
+/*         MAIN CONTENT          */
+/* ============================= */
+
+.main-content {
+    min-width: 0;
+}
+
+/* Places Q&A on the left and podcast on the right */
+.top-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    align-items: start;
+    margin-bottom: 28px;
+}
+
+/* Q&A heading */
+.top-content h1 {
+    font-size: 42px;
+}
+
+/* Black podcast subscription box */
+.podcast {
+    background-color: #211d1d;
+    color: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px #ddd;
+}
+
+.podcast h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.podcast p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+/* Places podcast links in a horizontal row */
+.podcast-links {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 15px;
+}
+
+.podcast-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+/* ============================= */
+/*          ARTICLES             */
+/* ============================= */
+
+/* Displays all five articles vertically */
+.articles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+/* Each article has two columns:
+   Text on left and image on right */
+.article-card {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 30px;
+    padding: 30px;
+    border: 1px solid #d6d2d0;
+    border-radius: 12px;
+    align-items: start;
+}
+
+.article-info {
+    min-width: 0;
+}
+
+/* Article date */
+.date {
+    font-size: 15px;
+    font-weight: bold;
+    color: #454545;
+    margin-bottom: 15px;
+}
+
+/* Article heading */
+.article-info h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+/* Article description */
+.description {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #454545;
+    margin-bottom: 18px;
+}
+
+/* Author name and avatar */
+.author {
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Circular author avatar */
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #d7d7d7;
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+}
+
+/* Comments, tags and more options */
+.article-bottom {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #444;
+}
+
+/* Category tag */
+.tag {
+    border: 1px solid #3764ff;
+    color: #244cce;
+    padding: 3px 12px;
+    border-radius: 20px;
+}
+
+.more {
+    color: #aaa;
+}
+
+
+/* ============================= */
+/*        ARTICLE IMAGES         */
+/* ============================= */
+
+/* Creates five colorful columns using CSS Grid */
+.question-image {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    min-height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Styles each image column */
+.question-image div {
+    display: grid;
+    place-items: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+    background-color: #ffb900;
+}
+
+/* Gives each column a different background */
+.question-image div:nth-child(2) {
+    background-color: #ed79e8;
+}
+
+.question-image div:nth-child(3) {
+    background-color: #153a9a;
+}
+
+.question-image div:nth-child(4) {
+    background-color: #f4c500;
+}
+
+.question-image div:nth-child(5) {
+    background-color: #a4a0ed;
+}
+
+/* Different colors for article images */
+.image-two div:nth-child(odd) {
+    background-color: #f48024;
+}
+
+.image-three div:nth-child(even) {
+    background-color: #173c9b;
+}
+
+.image-four div:nth-child(odd) {
+    background-color: #8b78d9;
+}
+
+/* Styles the fifth article photograph */
+.article-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* ============================= */
+/*             FOOTER            */
+/* ============================= */
+
+/* Creates five footer columns */
+.footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    padding: 45px 5%;
+    background-color: #f0eeee;
+}
+
+.footer-logo {
+    font-size: 35px;
+}
+
+.footer h3 {
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.footer p {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.footer a {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+
+/* ============================= */
+/*       TABLET RESPONSIVE       */
+/* ============================= */
+
+@media screen and (max-width: 1000px) {
+
+    /* Reduces the sidebar width */
+    .page-layout {
+        grid-template-columns: 220px 1fr;
+        gap: 20px;
+        padding: 30px 3%;
+    }
+
+    .side-nav a {
+        font-size: 18px;
+    }
+
+    /* Places podcast below the Q&A heading */
+    .top-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjusts article text and image width */
+    .article-card {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    .article-info h2 {
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .question-image,
+    .article-image {
+        min-height: 220px;
+        height: 220px;
+    }
+
+    /* Podcast links wrap into multiple rows */
+    .podcast-links {
+        grid-auto-flow: row;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* ============================= */
+/*       MOBILE RESPONSIVE       */
+/* ============================= */
+
+@media screen and (max-width: 600px) {
+
+    /* Header content moves into separate rows */
+    .header {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .header-right {
+        grid-template-columns: 1fr auto auto;
+        grid-auto-flow: row;
+        justify-content: stretch;
+        gap: 12px;
+    }
+
+    .header-right input {
+        width: 100%;
+        grid-column: 1 / -1;
+    }
+
+    .header-icon {
+        display: none;
+    }
+
+    .signup {
+        text-align: center;
+    }
+
+    /* Sidebar moves above the main content */
+    .page-layout {
+        grid-template-columns: 1fr;
+        padding: 20px 4%;
+    }
+
+    /* Sidebar links display in two columns */
+    .side-nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .side-nav a {
+        font-size: 15px;
+        grid-template-columns: 30px 1fr;
+    }
+
+    .side-nav span {
+        font-size: 22px;
+    }
+
+    .side-nav hr {
+        grid-column: 1 / -1;
+    }
+
+    /* Hides business information on small screens */
+    .business-info {
+        display: none;
+    }
+
+    /* Q&A and podcast appear vertically */
+    .top-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .top-content h1 {
+        font-size: 32px;
+    }
+
+    .podcast {
+        padding: 20px;
+    }
+
+    .podcast h2 {
+        font-size: 21px;
+    }
+
+    .podcast p {
+        font-size: 14px;
+    }
+
+    /* Podcast links display in two columns */
+    .podcast-links {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    /* Article image moves below the text */
+    .article-card {
+        grid-template-columns: 1fr;
+        padding: 18px;
+        gap: 20px;
+    }
+
+    .article-info h2 {
+        font-size: 21px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .author {
+        margin-bottom: 20px;
+    }
+
+    .question-image,
+    .article-image {
+        height: 200px;
+        min-height: 200px;
+    }
+
+    .question-image div {
+        font-size: 55px;
+    }
+
+    /* Footer changes to two columns */
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 6%;
+    }
+
+    .footer-logo {
+        grid-column: 1 / -1;
+    }
+
 }
