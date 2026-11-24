@@ -1,12 +1,12 @@
 
-/* Removes default margin and padding from all elements */
+/* Removes default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Common styling for the complete website */
+/* Common website styling */
 body {
     font-family: Arial, sans-serif;
     color: #232020;
@@ -15,9 +15,9 @@ body {
 }
 
 
-/* ============================= */
-/*          TOP HEADER           */
-/* ============================= */
+/* =========================
+   HEADER
+========================= */
 
 .header {
     display: grid;
@@ -27,7 +27,7 @@ body {
     border-bottom: 1px solid #d6d2d0;
 }
 
-/* Places the logo and Blog text in one row */
+/* Logo and Blog text */
 .brand {
     display: grid;
     grid-auto-flow: column;
@@ -47,7 +47,7 @@ body {
     font-size: 20px;
 }
 
-/* Arranges search, icons and account links horizontally */
+/* Search box, icons and login links */
 .header-right {
     display: grid;
     grid-auto-flow: column;
@@ -56,7 +56,6 @@ body {
     gap: 22px;
 }
 
-/* Styles the search box */
 .header-right input {
     width: 270px;
     padding: 12px;
@@ -84,12 +83,11 @@ body {
 }
 
 
-/* ============================= */
-/*         PAGE LAYOUT           */
-/* ============================= */
+/* =========================
+   PAGE LAYOUT
+========================= */
 
-/* Creates two main columns:
-   Sidebar on the left and content on the right */
+/* Sidebar and main content */
 .page-layout {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -98,21 +96,20 @@ body {
 }
 
 
-/* ============================= */
-/*           SIDEBAR             */
-/* ============================= */
+/* =========================
+   SIDEBAR
+========================= */
 
 .sidebar {
     padding: 0 10px;
 }
 
-/* Arranges sidebar links vertically */
+/* Sidebar navigation links */
 .side-nav {
     display: grid;
     gap: 18px;
 }
 
-/* Each sidebar link has an icon and text */
 .side-nav a {
     display: grid;
     grid-template-columns: 40px 1fr;
@@ -126,14 +123,14 @@ body {
     font-size: 30px;
 }
 
-/* Separates different sidebar categories */
+/* Separates navigation categories */
 .side-nav hr {
     border: none;
     border-top: 1px solid #ddd;
     margin: 10px 0;
 }
 
-/* Business information below the sidebar links */
+/* Business information */
 .business-info {
     margin-top: 30px;
     border-top: 1px solid #ddd;
@@ -153,15 +150,15 @@ body {
 }
 
 
-/* ============================= */
-/*         MAIN CONTENT          */
-/* ============================= */
+/* =========================
+   MAIN CONTENT
+========================= */
 
 .main-content {
     min-width: 0;
 }
 
-/* Places Q&A on the left and podcast on the right */
+/* Q&A heading and podcast */
 .top-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -170,12 +167,11 @@ body {
     margin-bottom: 28px;
 }
 
-/* Q&A heading */
 .top-content h1 {
     font-size: 42px;
 }
 
-/* Black podcast subscription box */
+/* Podcast box */
 .podcast {
     background-color: #211d1d;
     color: white;
@@ -194,7 +190,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Places podcast links in a horizontal row */
+/* Podcast links */
 .podcast-links {
     display: grid;
     grid-auto-flow: column;
@@ -210,19 +206,18 @@ body {
 }
 
 
-/* ============================= */
-/*          ARTICLES             */
-/* ============================= */
+/* =========================
+   ARTICLES
+========================= */
 
-/* Displays all five articles vertically */
+/* Displays five articles vertically */
 .articles {
     display: grid;
     grid-template-columns: 1fr;
     gap: 28px;
 }
 
-/* Each article has two columns:
-   Text on left and image on right */
+/* Each article has text and image columns */
 .article-card {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
@@ -260,7 +255,7 @@ body {
     margin-bottom: 18px;
 }
 
-/* Author name and avatar */
+/* Author details */
 .author {
     display: grid;
     grid-template-columns: 40px auto;
@@ -272,7 +267,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Circular author avatar */
+/* Author avatar */
 .avatar {
     width: 38px;
     height: 38px;
@@ -283,7 +278,7 @@ body {
     font-size: 12px;
 }
 
-/* Comments, tags and more options */
+/* Comments and category */
 .article-bottom {
     display: grid;
     grid-auto-flow: column;
@@ -307,60 +302,11 @@ body {
 }
 
 
-/* ============================= */
-/*        ARTICLE IMAGES         */
-/* ============================= */
+/* =========================
+   ARTICLE IMAGES
+========================= */
 
-/* Creates five colorful columns using CSS Grid */
-.question-image {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    min-height: 280px;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-/* Styles each image column */
-.question-image div {
-    display: grid;
-    place-items: center;
-    font-size: 100px;
-    font-weight: bold;
-    color: white;
-    background-color: #ffb900;
-}
-
-/* Gives each column a different background */
-.question-image div:nth-child(2) {
-    background-color: #ed79e8;
-}
-
-.question-image div:nth-child(3) {
-    background-color: #153a9a;
-}
-
-.question-image div:nth-child(4) {
-    background-color: #f4c500;
-}
-
-.question-image div:nth-child(5) {
-    background-color: #a4a0ed;
-}
-
-/* Different colors for article images */
-.image-two div:nth-child(odd) {
-    background-color: #f48024;
-}
-
-.image-three div:nth-child(even) {
-    background-color: #173c9b;
-}
-
-.image-four div:nth-child(odd) {
-    background-color: #8b78d9;
-}
-
-/* Styles the fifth article photograph */
+/* Common style for all five images */
 .article-image {
     width: 100%;
     height: 280px;
@@ -369,9 +315,9 @@ body {
 }
 
 
-/* ============================= */
-/*             FOOTER            */
-/* ============================= */
+/* =========================
+   FOOTER
+========================= */
 
 /* Creates five footer columns */
 .footer {
@@ -406,13 +352,13 @@ body {
 }
 
 
-/* ============================= */
-/*       TABLET RESPONSIVE       */
-/* ============================= */
+/* =========================
+   TABLET RESPONSIVE
+========================= */
 
 @media screen and (max-width: 1000px) {
 
-    /* Reduces the sidebar width */
+    /* Reduces sidebar width */
     .page-layout {
         grid-template-columns: 220px 1fr;
         gap: 20px;
@@ -423,12 +369,12 @@ body {
         font-size: 18px;
     }
 
-    /* Places podcast below the Q&A heading */
+    /* Podcast moves below heading */
     .top-content {
         grid-template-columns: 1fr;
     }
 
-    /* Adjusts article text and image width */
+    /* Adjusts article layout */
     .article-card {
         grid-template-columns: 1fr 1fr;
         gap: 18px;
@@ -443,31 +389,31 @@ body {
         font-size: 15px;
     }
 
-    .question-image,
+    /* Reduces image height */
     .article-image {
-        min-height: 220px;
         height: 220px;
     }
 
-    /* Podcast links wrap into multiple rows */
+    /* Podcast links wrap into rows */
     .podcast-links {
         grid-auto-flow: row;
         grid-template-columns: repeat(3, auto);
     }
 
+    /* Footer uses three columns */
     .footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 
-/* ============================= */
-/*       MOBILE RESPONSIVE       */
-/* ============================= */
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
 @media screen and (max-width: 600px) {
 
-    /* Header content moves into separate rows */
+    /* Header moves into separate rows */
     .header {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -493,13 +439,13 @@ body {
         text-align: center;
     }
 
-    /* Sidebar moves above the main content */
+    /* Sidebar moves above main content */
     .page-layout {
         grid-template-columns: 1fr;
         padding: 20px 4%;
     }
 
-    /* Sidebar links display in two columns */
+    /* Sidebar links use two columns */
     .side-nav {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
@@ -518,7 +464,7 @@ body {
         grid-column: 1 / -1;
     }
 
-    /* Hides business information on small screens */
+    /* Hides business information */
     .business-info {
         display: none;
     }
@@ -545,12 +491,12 @@ body {
         font-size: 14px;
     }
 
-    /* Podcast links display in two columns */
+    /* Podcast links use two columns */
     .podcast-links {
         grid-template-columns: repeat(2, auto);
     }
 
-    /* Article image moves below the text */
+    /* Article image moves below text */
     .article-card {
         grid-template-columns: 1fr;
         padding: 18px;
@@ -569,17 +515,12 @@ body {
         margin-bottom: 20px;
     }
 
-    .question-image,
+    /* Image size for mobile */
     .article-image {
         height: 200px;
-        min-height: 200px;
     }
 
-    .question-image div {
-        font-size: 55px;
-    }
-
-    /* Footer changes to two columns */
+    /* Footer uses two columns */
     .footer {
         grid-template-columns: repeat(2, 1fr);
         padding: 30px 6%;
@@ -588,5 +529,4 @@ body {
     .footer-logo {
         grid-column: 1 / -1;
     }
-
 }
